@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="index.css"/>
+    <script type="module" src="app.js"></script>  
+    <title>Twitter Analysis</title>
+</head>
+<body>
+    <header>
+        <img src=media\logo.png width="80">
+    </header>
+    <div id="target">
+        <form>
+            <input type="radio" id="@user" name="act" value="@user">
+            <label for="user">User</label>
+            <label>@</label>
+            <input type="text" id="username" placeholder="Twitter user name here">
+            <input type="radio" id="stream" name="act" value="stream">
+            <label for="stream">Twitter stream</label>
+        </form>
+    </div>
+    <div id="options">
+        <form id="operations">
+            <div>
+                <input type="radio" id="likes" name="searchfor" value="likes">
+                <label>likes</label>
+            </div>
+            <div>
+                <input type="radio" id="tweetCount" name="searchfor" value="tweetCount">
+                <label>daily tweet count</label>
+            </div>
+            <div>
+                <input type="radio" id="blocks" name="searchfor" value="blocks">
+                <label>blocks</label>
+            </div>
+            <div>
+                <input type="radio" id = "followers" name="searchfor" value="followers">
+                <label>followers</label>
+            </div>
+            <div>
+                <input type="radio" id="friends" name="searchfor" value="friends">
+                <label>friends</label>
+            </div>
+            <div>
+                <input type="radio" id="mentions" name="searchfor" value="mentions">
+                <label>mentions</label>
+            </div>
+            <div>
+                <input type="radio" id="timeline" name="searchfor" value="timeline">
+                <label>timeline</label>
+            </div>
+            <div>
+                <input type="radio" id="tweets" name="searchfor" value="tweets">
+                <label>Tweets</label>
+            </div>
+        </form>
+        <form id="filters">
+                <label for="start">Start date:</label>
+                <input type="date" id="start" name="dig-start"
+                    min="2018-01-01" max="2018-12-31">
+                    <label for="end">End date:</label>
+                <input type="date" id="end" name="dig-end"
+                    min="2022-01-01" max="2022-12-31">
+                <label for="user">Include this words</label>
+                <input type="text" id="words"  placeholder="word1 word2 word3 ...">
+                <label for="user">Don't include this words</label>
+                <input type="text" id="!words"  placeholder="word1 word2 word3 ...">
+                <label for="retweets">Retweets</label>
+                <select name="retweets" id="retweetscars">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="all">All</option>
+                </select>
+            </form>
+
+    </div>
+    <button id="dig">dig it</button>
+    <div id=outputFields></div>
+    <footer>Created by Mufida Dkhili Ep Alakulju, 2022, OAMK</footer>
+
+</body>
+</html>
